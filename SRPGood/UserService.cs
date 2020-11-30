@@ -21,7 +21,7 @@ namespace SRP
         }
 
     }
-
+    //KISS -> Keep it simple and stupid. 
     public class MailService
     {
         private SmtpClient _smtpClient;
