@@ -30,7 +30,7 @@ medical.Surger(human);
 
 public abstract class Creature
 {
-    public string Name { private get; private set; }
+    public string Name { get; private set; }
     public int Age { get; private set; }
     public void Breath()
     {
