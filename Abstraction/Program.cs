@@ -55,17 +55,6 @@ public interface IThinkable
     void Think();
 }
 
-
-public abstract class Abstraction1
-{
-    public abstract void blabla();
-}
-
-public interface IAbstraction1
-{
-    public void blabla();
-}
-
 public class Animal : Creature
 {
     public override void Die()
@@ -79,7 +68,7 @@ public class Animal : Creature
     }
 }
 
-public class Human : Creature
+public class Human : Creature, IThinkable
 {
 
     public override void Die()
@@ -108,8 +97,8 @@ public class Medical
         Console.WriteLine("Medikal tanım yapılıyor...");
         creature.Describe();
 
-        if (creature is IThinkable)
-        {
+         if (creature is IThinkable)
+       {
             ((IThinkable)creature).Think();
             //can ask different questions.
         }
